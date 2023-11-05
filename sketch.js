@@ -42,3 +42,15 @@ function makeCircles() {//creating the circles
     }
   }
 }
+
+function draw() {//animation loop
+  background(bgColor);
+  let currentTime = millis();
+  for (let circle of circles) {
+    if (currentTime >= circle.startTime) {
+      circle.update();
+      circle.show();
+      circle.checkHover(mouseX, mouseY);
+    }
+  }
+}
