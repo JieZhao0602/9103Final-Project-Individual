@@ -24,7 +24,7 @@ function makeCircles() {//creating the circles
       let x = (bigCircleRadius + 2.5) + col * (bigCircleRadius * 2 + 5);
       let y = (bigCircleRadius + 2.5) + row * (bigCircleRadius * 2 + 5);
 
-      let noiseVal = noise(x * 0.01, y * 0.01);
+      let noiseVal = noise(x * 0.01, y * 0.01);//time based appearance
       let startTime = noiseVal * 5000;
 
       let hue = random(360);
