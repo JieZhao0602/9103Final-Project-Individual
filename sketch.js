@@ -54,3 +54,17 @@ function draw() {//animation loop
     }
   }
 }
+
+function mousePressed() {//interactive elements
+  for (let circle of circles) {
+    circle.onClick();
+  }
+}
+
+function mouseDragged() {
+  circles.push(new CircleCenter(mouseX, mouseY, maxRadius * 0.2, color(random(360), 100, 50, 0.7)));
+}
+
+function doubleClicked() {
+  bgColor = [random(360), random(100), random(100)];
+}
